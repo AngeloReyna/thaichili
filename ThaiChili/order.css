@@ -1,0 +1,196 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+.delivery{
+    text-align: center;
+    font-family: bree serif;
+    font-size: 3em;
+}
+.delivery img{
+    width: 15%;
+    margin: 20px;
+    border-radius: 50px;
+}
+
+.map{
+    justify-content: center;
+    text-align: center;
+    display: inline-block;
+}
+
+img:hover{
+    opacity: 0.5;
+    transition: linear 0.2s;
+}
+
+
+
+
+
+
+
+
+
+
+.mainbody img{
+    width: 100%;
+}
+body{
+    background-color: lemonchiffon;
+}
+.nav-links li:nth-child(3){
+    font-weight: 800;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    font-family: bree serif;
+    background-color: white;
+    border-bottom: solid 3px black;
+    height: 100px;
+}
+
+.logo{
+    letter-spacing: 2px;
+    padding-left: 0px;
+    margin-left: 0px;
+    background-color: black;
+    height: 100px;
+    align-items: center; 
+}
+.logo img{
+    height: 98.5px;
+}
+
+.nav-links{
+    float: right;
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+
+
+}
+.nav-links a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 5px;
+    
+}
+
+@media  screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 80vh;
+        top: 10vh;
+        background-color: white ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        
+        opacity: 0.94;
+    }
+    .nav-links li{
+        opacity: 1;
+    }
+    .burger{
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.nav-links a:hover{
+    border-bottom: solid black 3px;
+    transition: border-bottom linear 0.1s ;
+
+}
+
+footer{
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding:5% 20%;
+    background-color: black;
+}
+
+footer div{
+    color: white;
+    font-family: bree serif;
+    margin: 0 30px;
+    display: inline-block;
+    line-height: 20px;
+}
+footer li{
+    list-style: none;
+}
+
+footer ul{
+    display: inline-block;
+}
+
+footer li:nth-child(even){
+    border-bottom: solid white 1px;
+}
+
+.location{
+    padding-top: 0px;
+    margin-left: 100px;
+    
+}
+@media  screen and (min-width: 769px){
+    nav{
+        position: fixed;
+        width: 100%;
+        z-index: 11;
+    }
+}
+
+.delivery{
+    padding-top: 20px;
+}
